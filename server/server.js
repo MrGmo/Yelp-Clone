@@ -7,7 +7,7 @@ app.get('/getRestaurants', (req, res) => {
   console.log('get all restaurants')
 });
 
-console.log('anl99e')
+console.log('another test...')
 
 
 const port = process.env.PORT || 4000;
