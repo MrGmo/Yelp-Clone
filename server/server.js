@@ -10,7 +10,7 @@ app.use(express.json())
 
 //Get all Restaurants
 app.get('/api/restaurants', async (req, res) => {
-  try{
+  try {
     const results = await db.query('select * from restaurants');
     console.log(results);
     res.status(200).json({
@@ -27,14 +27,19 @@ app.get('/api/restaurants', async (req, res) => {
 
 
 //Get a Restaurant
-app.get('/api/restaurants/:id', (req, res) => {
- console.log(req.params);
- res.status(200).json({
-   status: "success",
-   data: {
-     restaurant: 'mcdonalds'
-   }
- })
+app.get('/api/restaurants/:id', async (req, res) => {
+ console.log(req.params.id);
+  try {
+    const results = await db.query('select * from restaurants where id = $1', [req.params.id]);
+    res.status(200).json({
+      status: "success",
+      data: {
+        restaurant: results.rows[0],
+      },
+    });
+  }catch (err) {
+    console.log(err)
+  }
 });
 
 
