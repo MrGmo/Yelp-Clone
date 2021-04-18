@@ -38,33 +38,42 @@ app.get('/api/restaurants/:id', async (req, res) => {
       },
     });
   }catch (err) {
-    console.log(err)
+  console.log(err)
   }
 });
 
 
 //Create a Restaurant
-app.post('/api/restaurants', (req, res) => {
-  console.log(req.body);
-  res.status(201).json({
-    status: 'status',
-    data: {
-      restaurant: 'mcdonalds'
-    }
-  });
+app.post('/api/restaurants', async (req, res) => {
+  try {
+    const results = await db.query('INSERT INTO restaurants (name, location, price_range) values ($1, $2, $3) returning *', [req.body.name, req.body.location, req.body.price_range]
+    );
+    res.status(201).json({
+      status: 'status',
+      data: {
+        restaurant: results.rows[0]
+      },
+    });
+  } catch (err) {
+    console.log(err)
+  }
  });
 
 
 //Update Restaurant
-app.put('/api/restaurants/:id', (req, res) => {
-  console.log(req.params.id);
-  console.log(req.body);
-  res.status(200).json({
+app.put('/api/restaurants/:id', async (req, res) => {
+ try {
+   const results = await db.query('UPDATE restaurants SET name = $1, location = $2, price_range = $3 where id = $4 returning *', [req.body.name, req.body.location, req.body.price_range, req.params.id]
+   );
+   res.status(200).json({
     status: 'success',
     data: {
-      restaurant: 'mcdonalds'
-    }
+      restaurant: results.rows[0]
+    },
   });
+ } catch (err) {
+   console.log(err)
+ }
 });
 
 
