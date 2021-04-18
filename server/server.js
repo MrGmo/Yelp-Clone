@@ -4,9 +4,7 @@ const db = require('./db');
 const morgan = require('morgan');
 const app = express();
 
-
 app.use(express.json())
-
 
 //Get all Restaurants
 app.get('/api/restaurants', async (req, res) => {
@@ -25,7 +23,6 @@ app.get('/api/restaurants', async (req, res) => {
   }
 });
 
-
 //Get a Restaurant
 app.get('/api/restaurants/:id', async (req, res) => {
  console.log(req.params.id);
@@ -41,7 +38,6 @@ app.get('/api/restaurants/:id', async (req, res) => {
   console.log(err)
   }
 });
-
 
 //Create a Restaurant
 app.post('/api/restaurants', async (req, res) => {
@@ -59,7 +55,6 @@ app.post('/api/restaurants', async (req, res) => {
   }
  });
 
-
 //Update Restaurant
 app.put('/api/restaurants/:id', async (req, res) => {
  try {
@@ -76,12 +71,16 @@ app.put('/api/restaurants/:id', async (req, res) => {
  }
 });
 
-
 //Delete Restaurant
-app.delete('/api/restaurants/:id', (req, res) => {
-  res.status(204).json({
-    status: 'success'
-  });
+app.delete('/api/restaurants/:id', async (req, res) => {
+  try {
+    const results = await db.query('DELETE FROM restaurants where id = $1', [req.params.id])
+    res.status(204).json({
+      status: 'success'
+    });
+  } catch (err) {
+    console.log(err)
+  }
 });
 
 const port = process.env.PORT || 4000;
