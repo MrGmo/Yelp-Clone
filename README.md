@@ -1,6 +1,6 @@
 # Yelp-Clone
 
-This is a pretty simple CRUD Yelp clone which adds restaurants and reviews to a postgreSQL database and updates the UI accordingly along with the restaurants rating average.
+This is a pretty simple CRUD Yelp clone which adds restaurants and reviews to a postgreSQL database and updates the UI accordingly. It also allows you to read past reviews and gives you an average rating of all the restaurants in the database.
 
 ![Yelp-CloneApp](https://user-images.githubusercontent.com/69869221/115337926-7fa2a100-a167-11eb-9312-7ea5c7afefd6.png)
 
