@@ -11,11 +11,7 @@ const StarRating = ({rating}) => {
       stars.push(<i key={i} className="far fa-star text-warning"></i>)
     }
   }
-  return (
-    <>
-    {stars}
-    </>
-  )
-}
+  return <>{stars}</>
+};
 
 export default StarRating

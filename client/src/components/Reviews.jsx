@@ -26,4 +26,4 @@ const Reviews = ({reviews}) => {
   )
 }
 
-export default Reviews
+export default Reviews;
