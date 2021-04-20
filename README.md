@@ -1,36 +1,12 @@
 # Yelp-Clone
 
+This is a pretty simple CRUD Yelp Clone which adds restaurants and reviews to a postgreSQL database and updates the UI accordingly along with the restaurants rating average.
 
-
-My Awesome Project
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
-
-Link to project: http://recruiters-love-seeing-live-demos.com/
 ![Yelp-CloneApp](https://user-images.githubusercontent.com/69869221/115337926-7fa2a100-a167-11eb-9312-7ea5c7afefd6.png)
 
+Tech used: PostgreSQL, Express, React, Node.js, Boostrap, Node-Postgre, and Context API Storage.
 
-How It's Made:
-Tech used: HTML, CSS, JavaScript, Framework of choice
-
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+This project really allowed me to put together a complete CRUD app from start to finish. Some of the spacing and color isn't as good as I would have hoped for because I'm still learning the bootstrap classes, but all in all it went well. Most notably, I came to realize how important it is to build larger applications. Building larger applications forces you think about writing cleaner code and organizing your project in a manner that would make sense to follow. The thing I'm most proud of in this project is the amount of documentation I read and was able to follow. That in itself is a critical skill for any developer and I definitely improved on this throughout this project.
 
 Optimizations
-(optional)
-
-You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews!
-
-Lessons Learned:
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or fuck yeah I did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
-
-
-
-
-ghhcghj
-
-
-
-
-hfjhgfjg
-
-
-fgfhfgh
+If I had more time on this project I would definitely work on the color scheme of my pages, they were very basic and I could have improved upon them with a little more React code. Overall, that wasn't the focus of this project, but it's something I might go back to in the future to improve.
