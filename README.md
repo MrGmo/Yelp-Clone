@@ -6,10 +6,7 @@ My Awesome Project
 Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
-
-
-![header image](https://raw.github.com/MrGmo/MrGmo/master/Yelp-CloneApp.png)
-
+![Yelp-CloneApp](https://user-images.githubusercontent.com/69869221/115337926-7fa2a100-a167-11eb-9312-7ea5c7afefd6.png)
 
 
 How It's Made:
