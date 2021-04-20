@@ -8,8 +8,7 @@ Write a short sentence or two about this project and what it does. Be sure to in
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
 
-
-
+![header image](https://raw.github.com/MrGmo/MrGmo/master/Yelp-CloneApp.png)
 
 
 
